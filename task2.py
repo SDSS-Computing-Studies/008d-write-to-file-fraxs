@@ -29,3 +29,10 @@ task2.txt contents:
 
 (3 points)
 """
+filename = 'task2.txt'
+file = open(filename, 'w')
+inputData = None
+while inputData != "":
+    inputData = input("Enter integers. Press Return to exit: ")
+    file.write(inputData + "\n")
+file.close()
