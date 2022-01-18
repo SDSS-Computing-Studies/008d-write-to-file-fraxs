@@ -20,18 +20,27 @@ def start():
         list1 = json.loads(inputdata)
 
 def firstFunc():
-    x = input("Enter the subject you want to change: ")
-    y = input("Enter what you want to change it to: ")
+    x = str(input("Enter the subject you want to change: "))
+    y = str(input("Enter what you want to change it to: "))
     for i in range(len(list1)):
         if x in list1[i]:
             list1[i] = y
+            break
+    if list1[i] !=y:
+        print("\nNo subject with that name.\n")
 
 def secondFunc():
-    x = input("Enter the subject you want to change the grade of: ")
-    y = input("Enter what you want to change the grade to: ")
+    x = str(input("Enter the subject you want to change the grade of: "))
+    y = int(input("Enter what you want to change the grade to: "))
     for i in range(len(list1)):
         if x in list1[i]:
             list1[i+1] = y
+            list1[i] = x
+            break
+    if list1[i] != x:
+        print("\nNo subject with that name. \n")
+
+            
 
 def thirdFunc():
     print(f" SUBJECT:GRADES \n{list1[0],list1[1]}\n{list1[2],list1[3]}\n{list1[4],list1[5]}\n{list1[6],list1[7]}\n{list1[8],list1[9]}\n{list1[10],list1[11]}\n{list1[12],list1[13]}\n{list1[14],list1[15]}")
@@ -63,5 +72,6 @@ def main():
         else:
             print("Invalid input.")
 
-if __name__ == "__main__":
-    main()
+while True:
+    if __name__ == "__main__":
+        main()

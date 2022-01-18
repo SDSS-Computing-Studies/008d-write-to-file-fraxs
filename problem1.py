@@ -9,7 +9,7 @@ if os.path.exists("problem1.txt"):
     if os.stat(filename).st_size == 0:
         print("The file is empty")
     else:
-        outputData = json.dumps(file)
-        print(file)
+        outputData = json.loads(file)
+        
 else:
     print("The file does not exist")
